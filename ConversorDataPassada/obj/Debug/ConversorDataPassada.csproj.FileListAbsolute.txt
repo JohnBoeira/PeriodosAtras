@@ -1,0 +1,6 @@
+C:\Users\Cliente\Desktop\Academia do Programador\Projetos\ConversorData\ConversorDataPassada\bin\Debug\ConversorDataPassada.dll
+C:\Users\Cliente\Desktop\Academia do Programador\Projetos\ConversorData\ConversorDataPassada\bin\Debug\ConversorDataPassada.pdb
+C:\Users\Cliente\Desktop\Academia do Programador\Projetos\ConversorData\ConversorDataPassada\obj\Debug\ConversorDataPassada.csprojAssemblyReference.cache
+C:\Users\Cliente\Desktop\Academia do Programador\Projetos\ConversorData\ConversorDataPassada\obj\Debug\ConversorDataPassada.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\Desktop\Academia do Programador\Projetos\ConversorData\ConversorDataPassada\obj\Debug\ConversorDataPassada.dll
+C:\Users\Cliente\Desktop\Academia do Programador\Projetos\ConversorData\ConversorDataPassada\obj\Debug\ConversorDataPassada.pdb
