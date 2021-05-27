@@ -13,20 +13,28 @@ namespace TesteDataConversor.UnitTest
             ConversorData conversorData = new ConversorData();
             //HH:mm:ss
             string resultado = conversorData.Converter(Convert.ToDateTime("26/05/2021"));
-            string resultado1 = conversorData.Converter(Convert.ToDateTime("28/05/2020"));
+            string resultado1 = conversorData.Converter(Convert.ToDateTime("24/05/2021"));
             Assert.AreEqual("Um dia atrás", resultado);
-            Assert.AreEqual("Onze meses quatro semanas e trinta dias atrás", resultado1);
+            Assert.AreEqual("Três dias atrás", resultado1);
         }
         [TestMethod]
         public void Conversor_Semana()
         {
             ConversorData conversorData = new ConversorData();
             //HH:mm:ss
-            string resultado = conversorData.Converter(Convert.ToDateTime("20/05/2021"));
+          
             string resultado1 = conversorData.Converter(Convert.ToDateTime("13/05/2021"));
-
-            Assert.AreEqual("Uma semana atrás", resultado);
+          
             Assert.AreEqual("Duas semanas atrás", resultado1);
+        }
+        [TestMethod]
+        public void Conversor_SemanaEDia()
+        {
+            ConversorData conversorData = new ConversorData();
+            //HH:mm:ss
+            string resultado = conversorData.Converter(Convert.ToDateTime("18/05/2021"));
+            
+            Assert.AreEqual("Uma semana e dois dias atrás", resultado);       
         }
         [TestMethod]
         public void Conversor_Mes()
@@ -35,9 +43,19 @@ namespace TesteDataConversor.UnitTest
             //HH:mm:ss
             string resultado = conversorData.Converter(Convert.ToDateTime("26/04/2021"));
             string resultado1 = conversorData.Converter(Convert.ToDateTime("27/12/2020"));
-
+            
             Assert.AreEqual("Um mês atrás", resultado);
-            Assert.AreEqual("Cinco meses atrás", resultado1);
+            Assert.AreEqual("Cinco meses atrás", resultado1);            
+        }
+        [TestMethod]
+        public void Conversor_MesEDia()
+        {
+            ConversorData conversorData = new ConversorData();
+            //HH:mm:ss
+                     
+            string resultado2 = conversorData.Converter(Convert.ToDateTime("28/05/2020"));
+                       
+            Assert.AreEqual("Onze meses quatro semanas e dois dias atrás", resultado2);
         }
         [TestMethod]
         public void Conversor_Ano()
@@ -47,7 +65,6 @@ namespace TesteDataConversor.UnitTest
             string resultado = conversorData.Converter(Convert.ToDateTime("27/05/2020"));
 
             Assert.AreEqual("Um ano atrás", resultado);
-
         }
         [TestMethod]
         public void Conversor_AnoMesDia()
@@ -56,8 +73,7 @@ namespace TesteDataConversor.UnitTest
             //HH:mm:ss
             string resultado = conversorData.Converter(Convert.ToDateTime("20/03/2020"));
 
-            Assert.AreEqual("Um ano dois meses uma semana e nove dias atrás", resultado);
-
+            Assert.AreEqual("Um ano dois meses uma semana e dois dias atrás", resultado);
         }
         [TestMethod]
         public void Conversor_HorasSegMinutos()
@@ -74,7 +90,7 @@ namespace TesteDataConversor.UnitTest
             string resultado = conversorHoraMinSec.Converter(horas.ToString(), min.ToString(), segundos.ToString()) + "atrás";
 
             Assert.AreEqual("duas horas atrás", resultado);
-
+            
             dataAntiga = Convert.ToDateTime("27/03/2020 20:10:10");
             dataNova = Convert.ToDateTime("27/03/2020 22:11:11");
             horas = dataNova.Hour - dataAntiga.Hour;

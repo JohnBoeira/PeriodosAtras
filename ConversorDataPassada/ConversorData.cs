@@ -21,10 +21,7 @@ namespace ConversorDataPassada
             int anos = ConverterAno(date);
             int dias = ConverterDias(date);
             int meses = ConverterMeses(date);
-
-            dias = Math.Abs(dias);
-            meses = Math.Abs(meses);
-
+       
             if (anos != 0) // tem ano
             {
                 dataConvertida += conversorAno.Converter(anos.ToString());
@@ -35,12 +32,10 @@ namespace ConversorDataPassada
                     {
                         dataConvertida += " e " + ConverterMeses(meses, dias);
                     }
-
                 }
                 else if(dias != 0) { 
                     dataConvertida += "e "+ conversorDia.Converter(dias.ToString()); 
-                }
-                
+                }                
             }
             else if (meses != 0) //tem mes
             {              
@@ -72,12 +67,11 @@ namespace ConversorDataPassada
                 {
                     mesConvertido += conversorDia.Converter(dias.ToString());
                 }
-                else
+                else 
                 {
                     mesConvertido += "e " + conversorDia.Converter(dias.ToString());
                 }
-            }
-                       
+            }                      
             return mesConvertido;
         }
 
@@ -94,7 +88,6 @@ namespace ConversorDataPassada
 
             return (DateTime.MinValue + span).Month - 1;
         }
-
 
         private int ConverterDias(DateTime date)
         {
