@@ -13,8 +13,8 @@ namespace ConversorDataPassada
             switch (valor.Length)
             {              
                 case 1: return ConverterUnidade(valor.ToCharArray()[0]);
-                case 2: return ConverterDezenaUnidade(valor.ToCharArray()[1], valor.ToCharArray()[0]);
-                case 3: return ConverterCentenaDezenaUni(valor.ToCharArray()[2], valor.ToCharArray()[1], valor.ToCharArray()[0]);              
+                case 2: return ConverterDezenaUnidade(valor.ToCharArray()[0], valor.ToCharArray()[1]);
+                case 3: return ConverterCentenaDezenaUni(valor.ToCharArray()[0], valor.ToCharArray()[1], valor.ToCharArray()[2]);              
             }
             return "";
         }
@@ -39,7 +39,7 @@ namespace ConversorDataPassada
 
         protected string ConverterDezenaUnidade(char dezena, char unidade)
         {          
-            if (dezena == 1)
+            if (dezena == '1')
             {
                 switch (unidade)
                 {
@@ -58,7 +58,7 @@ namespace ConversorDataPassada
             }
             else
             {
-                if (unidade == 0) //ex: 20 30 40 50 80
+                if (unidade == '0') //ex: 20 30 40 50 80
                 {
                     return ConverterDezena(dezena);
                 }

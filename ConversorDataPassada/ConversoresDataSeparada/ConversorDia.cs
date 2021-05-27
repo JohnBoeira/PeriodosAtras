@@ -22,7 +22,7 @@ namespace ConversorDataPassada
                     diasExtenso += "uma semana ";
                     if (diasDescontadoDaSemana != 0)
                     {
-                        diasExtenso += " e " + ConverterApenasDia(dia);
+                        diasExtenso += "e " + ConverterApenasDia(dia);
                     }
                 }
                 else if (quantidadeDeSemanas == 2)
@@ -30,7 +30,7 @@ namespace ConversorDataPassada
                     diasExtenso += "duas semanas ";
                     if (diasDescontadoDaSemana != 0)
                     {
-                        diasExtenso += " e " + ConverterApenasDia(dia);
+                        diasExtenso += "e " + ConverterApenasDia(dia);
                     }
                 }
                 else
@@ -38,7 +38,7 @@ namespace ConversorDataPassada
                     diasExtenso += ConverterValor(quantidadeDeSemanas.ToString()) + " semanas ";
                     if (diasDescontadoDaSemana != 0)
                     {
-                        diasExtenso += " e " + ConverterApenasDia(dia);
+                        diasExtenso += "e " + ConverterApenasDia(dia);
                     }                   
                 }                
             }
